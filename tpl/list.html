@@ -20,8 +20,8 @@
             <!--@end-->
         </select>
         <input type="text" name="search_keyword" value="{htmlspecialchars($search_keyword)}" class="inputTypeText" />
-        <span class="button black strong"><input type="submit" value="{$lang->cmd_search}" /></span>
-        <a href="#" onclick="location.href='{getUrl('','module',$module,'act',$act)}';return false;" class="button"><span>{$lang->cmd_cancel}</span></a>
+        <input class="x_btn x_btn-inverse" type="submit" value="{$lang->cmd_search}" />
+        <a href="#" onclick="location.href='{getUrl('','module',$module,'act',$act)}';return false;" class="x_btn"><span>{$lang->cmd_cancel}</span></a>
     </fieldset>
 </form>
 
@@ -68,7 +68,7 @@
 
     <!-- 버튼 -->
     <div class="x_btn-group">
-        <span class="x_btn x_btn-inverse"><input type="submit" value="{$lang->cmd_delete}" /></span>
+        <input class="x_btn x_btn-inverse" type="submit" value="{$lang->cmd_delete}" />
     </div>
     <div class="x_btn-group x_pull-right">
         <a href="{getUrl('act','dispMsg_adminAdminInsert')}" class="x_btn x_btn-inverse"><span>{$lang->cmd_send_message}</span></a>
@@ -106,7 +106,7 @@
             <!--@end-->
         </select>
         <input type="text" name="search_keyword" value="{htmlspecialchars($search_keyword)}" class="inputTypeText" />
-        <span class="x_btn x_btn-inverse"><input type="submit" value="{$lang->cmd_search}" /></span>
+        <input class="x_btn x_btn-inverse" type="submit" value="{$lang->cmd_search}" />
         <a href="#" onclick="location.href='{getUrl('','module',$module,'act',$act)}';return false;" class="x_btn"><span>{$lang->cmd_cancel}</span></a>
     </fieldset>
 </form>
