@@ -33,14 +33,13 @@
     <caption>Total {number_format($total_count)}, Page {number_format($page)}/{number_format($total_page)}</caption>
     <thead>
         <tr>
-            <th scope="col"><div>{$lang->no}</div></th>
-            <th scope="col"><div><input type="checkbox" onclick="XE.checkboxToggleAll(); return false;"/></div></th>
+            <th scope="col" class="title"><div>{$lang->title}</div></th>
             <th scope="col" class="nowr"><div>{$lang->sender}</div></th>
             <th scope="col" class="nowr"><div>{$lang->receiver}</div></th>
-			<th scope="col" class="title"><div>{$lang->title}</div></th>
             <th scope="col" class="nowr"><div>{$lang->cmd_confirm}</div></th>
             <th scope="col" class="nowr"><div>{$lang->regdate}</div></th>
 			<th scope="col" colspan="2"><div>&nbsp;</div></th>
+            <th scope="col"><div><input type="checkbox" onclick="XE.checkboxToggleAll(); return false;"/></div></th>
         </tr>
     </thead>
     <tbody>
@@ -50,15 +49,14 @@
 		    $val->receiver = $oMemberModel->getMemberInfoByMemberSrl($val->receiver_srl);
 		}
 		<tr>
-            <td>{$no}</td>
-            <td><input type="checkbox" name="cart" value="{$val->message_srl}"/></td>
+            <td class="title"><a href="{getUrl('act','dispMsg_adminAdminList','message_srl', $val->message_srl,'message_type', $message_type)}" title="{htmlspecialchars($val->title)}">{htmlspecialchars($val->title)}</a></td>
             <td class="nowr"><div class="member_{$val->sender->member_srl}">{$val->sender->nick_name}</div></td>
             <td class="nowr"><div class="member_{$val->receiver->member_srl}">{$val->receiver->nick_name}</div></td>
-			<td class="title"><a href="{getUrl('act','dispMsg_adminAdminList','message_srl', $val->message_srl,'message_type', $message_type)}" title="{htmlspecialchars($val->title)}">{htmlspecialchars($val->title)}</a></td>
             <td class="nowr">{$val->readed}</td>
 			<td class="nowr">{zdate($val->regdate,"Y-m-d H:i:s")}</td>
             <td class="nowr"><a href="{getUrl('act','dispMsg_adminAdminModify','message_srl', $val->message_srl,'message_type', $message_type)}" title="{$lang->cmd_modify}"><i class="x_icon-pencil"></i></a></td>
 			<td class="nowr"><a href="{getUrl('act','dispMsg_adminAdminDelete','message_srl', $val->message_srl,'message_type', $message_type)}" title="{$lang->cmd_delete}"><i class="x_icon-trash"></i></a></td>
+            <td><input type="checkbox" name="cart" value="{$val->message_srl}"/></td>
         </tr>
         <!--@end-->
     </tbody>
