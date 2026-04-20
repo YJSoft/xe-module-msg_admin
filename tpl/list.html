@@ -71,19 +71,6 @@
     <div class="x_btn-group x_pull-right">
         <a href="{getUrl('act','dispMsg_adminAdminInsert')}" class="x_btn x_btn-inverse"><span>{$lang->cmd_send_message}</span></a>
     </div>
-
-    <!-- 페이지 네비게이션 -->
-    <div class="pagination a1">
-        <a href="{getUrl('page','','module_srl','')}" class="prevEnd">{$lang->first_page}</a> 
-        <!--@while($page_no = $page_navigation->getNextPage())-->
-            <!--@if($page == $page_no)-->
-                <strong>{$page_no}</strong> 
-            <!--@else-->
-                <a href="{getUrl('page',$page_no,'module_srl','')}">{$page_no}</a> 
-            <!--@end-->
-        <!--@end-->
-        <a href="{getUrl('page',$page_navigation->last_page,'module_srl','')}" class="nextEnd">{$lang->last_page}</a>
-    </div>
 </form>
 
 <form action="./" class="x_pagination" no-error-return-url="true">
@@ -143,27 +130,4 @@
 	<input type="search" name="search_keyword" value="{htmlspecialchars($search_keyword)}" title="{$lang->cmd_search}" />
 	<button type="submit" class="x_btn x_btn-inverse">{$lang->cmd_search}</button>
 	<a href="{getUrl('','module',$module,'act',$act)}" class="x_btn">{$lang->cmd_cancel}</a>
-</form>
-
-<form action="./" method="get" class="adminSearch" no-error-return-url="true">
-    <input type="hidden" name="module" value="{$module}" />
-    <input type="hidden" name="act" value="{$act}" />
-    <input type="hidden" name="message_type" value="{$message_type}" />
-    <fieldset>
-        <select name="is_readed">
-            <option value="">{$lang->total}</option>
-            <!--@foreach($lang->is_readed as $key => $val)-->
-            <option value="{$key}" <!--@if($is_readed==$key)-->selected="selected"<!--@end-->>{$val}</option>
-            <!--@end--> 
-		</select>
-        <select name="search_target">
-            <option value="">{$lang->search_target}</option>
-            <!--@foreach($lang->search_target_list as $key => $val)-->
-            <option value="{$key}" <!--@if($search_target==$key)-->selected="selected"<!--@end-->>{$val}</option>
-            <!--@end-->
-        </select>
-        <input type="text" name="search_keyword" value="{htmlspecialchars($search_keyword)}" class="inputTypeText" />
-        <input class="x_btn x_btn-inverse" type="submit" value="{$lang->cmd_search}" />
-        <a href="#" onclick="location.href='{getUrl('','module',$module,'act',$act)}';return false;" class="x_btn"><span>{$lang->cmd_cancel}</span></a>
-    </fieldset>
 </form>
