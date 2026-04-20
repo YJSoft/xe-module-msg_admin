@@ -2,11 +2,11 @@
 <!--%import("js/msg_admin.js")-->
 
 <form action="./" method="get" onsubmit="return procFilter(this, delete_msg)">
-<input type="hidden" name="page" value="{$page}" />
-<input type="hidden" name="message_srl" value="{$message->message_srl}" />
-<input type="hidden" name="message_type" value="{$message_type}" />
+    <input type="hidden" name="page" value="{$page}" />
+    <input type="hidden" name="message_srl" value="{$message->message_srl}" />
+    <input type="hidden" name="message_type" value="{$message_type}" />
 	<h4 class="xeAdmin">{$lang->confirm_delete}</h4>
-    <table cellspacing="0" class="rowTable">
+    <table cellspacing="0" class="x_table x_table-striped">
     <tr>
         <th scope="row"><div>{$lang->title}</div></th>
         <td class="wide">{$message->title}</td>
@@ -38,9 +38,11 @@
         <td>{$message->content}</td>
     </tr>
 	<tr>
-        <th colspan="2" class="button">
-			<span class="button black strong"><input type="submit" value="{$lang->cmd_delete}" /></span>
-            <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="button"><span>{$lang->cmd_back}</span></a>
+        <th colspan="2">
+            <div class="x_btn-group">
+			    <span class="x_btn x_btn-inverse"><input type="submit" value="{$lang->cmd_delete}" /></span>
+                <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="x_btn"><span>{$lang->cmd_back}</span></a>
+            </div>
         </th>
     </tr>
 </table>

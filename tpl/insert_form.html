@@ -10,7 +10,7 @@
 <input type="hidden" name="page" value="{Context::get('page')}" />
 <input type="hidden" name="receiver_value" value="" />
 	<h4 class="xeAdmin">{$lang->cmd_send_message}</h4>
-    <table cellspacing="0" class="rowTable">
+    <table cellspacing="0" class="x_table x_table-striped">
     <tr>
         <th scope="row"><div>{$lang->receiver}</div></th>
         <td>
@@ -55,9 +55,11 @@
     </tr>
 
 	<tr>
-        <th colspan="2" class="button">
-			<span class="button black strong"><input type="submit" value="{$lang->cmd_confirm}" /></span>
-            <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="button"><span>{$lang->cmd_back}</span></a>
+        <th colspan="2">
+            <div class="x_btn-group">
+			    <span class="x_btn x_btn-inverse"><input type="submit" value="{$lang->cmd_confirm}" /></span>
+                <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="x_btn"><span>{$lang->cmd_back}</span></a>
+            </div>
         </th>
     </tr>
 </table>

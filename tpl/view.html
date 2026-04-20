@@ -1,5 +1,5 @@
 <h4 class="xeAdmin">{$lang->msg_view}</h4>
-<table cellspacing="0" class="rowTable">
+<table cellspacing="0" class="x_table x_table-striped x_table-hover">
     <tr>
         <th scope="row"><div>{$lang->title}</div></th>
         <td class="wide">{$message->title}</td>
@@ -31,10 +31,12 @@
         <td>{$message->content}</td>
     </tr>
 	<tr>
-        <th colspan="2" class="button">
-            <a href="{getUrl('act','dispMsg_adminAdminModify','message_srl', $message->message_srl,'message_type', $message_type)}" class="button black"><span>{$lang->cmd_modify}</span></a>
-            <a href="{getUrl('act','dispMsg_adminAdminDelete','message_srl', $message->message_srl,'message_type', $message_type)}" class="button blue"><span>{$lang->cmd_delete}</span></a>
-            <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="button"><span>{$lang->cmd_back}</span></a>
+        <th colspan="2">
+            <div class="x_btn-group">
+                <a href="{getUrl('act','dispMsg_adminAdminModify','message_srl', $message->message_srl,'message_type', $message_type)}" class="x_btn x_btn-inverse"><span>{$lang->cmd_modify}</span></a>
+                <a href="{getUrl('act','dispMsg_adminAdminDelete','message_srl', $message->message_srl,'message_type', $message_type)}" class="x_btn blue"><span>{$lang->cmd_delete}</span></a>
+                <a href="{getUrl('act','dispMsg_adminAdminList','message_srl','','message_type',$message_type)}" class="x_btn"><span>{$lang->cmd_back}</span></a>
+            </div>
         </th>
     </tr>
 </table>
