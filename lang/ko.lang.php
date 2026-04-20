@@ -31,6 +31,7 @@ $lang->search_target_list = array(
 $lang->invalid_msg = "존재하지 않는 쪽지입니다.";
 $lang->msg_cart_is_null = '대상을 선택해주세요.';
 $lang->msg_view = "쪽지 보기";
+$lang->msg_readed = "읽음 여부";
 $lang->msg_readed_date_info = "yyyymmddhhiiss 형식이며, 상태가 읽음일때만 적용됩니다.";
 $lang->grant_to_member = "특정 사용자";
 $lang->communication_addon_null = "이 모듈을 사용하기위해선, 커뮤니케이션 애드온을 활성화 시켜야 합니다.\n기능설정 -> 애드온에서 활성화 시켜주세요.";
